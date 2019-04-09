@@ -17,7 +17,7 @@ class Bus
   end
 
   def pickup(passenger)
-    @passengers << passenger
+    @passengers += passenger
   end
 
   def dropoff(passenger)
