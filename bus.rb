@@ -28,4 +28,9 @@ class Bus
     @passengers = []
   end
 
+  def pickup_all(stop)
+    @passengers += stop.queue
+    stop.queue = []
+  end
+
 end

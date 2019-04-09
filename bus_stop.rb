@@ -2,7 +2,8 @@
 
 class BusStop
 
-  attr_reader :name, :queue
+  attr_reader :name
+  attr_accessor :queue
 
   def initialize(name)
     @name = name
@@ -13,9 +14,5 @@ class BusStop
     @queue.push(name)
   end
 
-  def pickup_all(bus, stop)
-    bus.pickup(@queue)
-    @queue = []
-  end
 
 end

@@ -34,7 +34,7 @@ class BusStopTest < MiniTest::Test
     @stop1.add_person(@brenda)
     @stop1.add_person(@bill)
     @stop1.add_person(@barbara)
-    @stop1.pickup_all(@bus33, @stop1)
+    @bus33.pickup_all(@stop1)
     assert_equal(0, @stop1.queue.length)
     assert_equal(4, @bus33.passengers.length)
   end
